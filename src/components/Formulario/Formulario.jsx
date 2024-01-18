@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Formulario.css'
 
 const Formulario = () => {
   const [nombre, setNombre] = useState('') 
@@ -38,8 +39,8 @@ const Formulario = () => {
         name="confirmPass"
         value={confirmPass}
         onChange={e => setConfirmPass(e.target.value)}
-
       />
+      <button type="submit">Registrarse</button>
     </form>
   )
 }

@@ -1,3 +1,4 @@
+import './Registro.css'
 import Formulario from "../Formulario/Formulario"
 import SocialButton from "../SocialButton/SocialButtom"
 
