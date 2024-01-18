@@ -4,6 +4,10 @@
   border-radius: 20px;
 }
 
+h2 {
+  margin-bottom: 24px;
+}
+
 .social {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

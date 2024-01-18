@@ -5,6 +5,7 @@ import SocialButton from "../SocialButton/SocialButtom"
 const Registro = () => {
   return (
     <div className="registro">
+      <h2>Crea una cuenta</h2>
       <div className="social">
         <SocialButton icon={'Google'}/>
         <SocialButton icon={'Facebook'}/>
