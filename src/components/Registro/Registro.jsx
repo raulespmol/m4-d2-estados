@@ -1,6 +1,7 @@
 import './Registro.css'
 import Formulario from "../Formulario/Formulario"
 import SocialButton from "../SocialButton/SocialButton"
+import Alert from '../Alert/Alert'
 
 const Registro = () => {
   return (
@@ -13,6 +14,7 @@ const Registro = () => {
       </div>
       <p>o usa tu email para registrarte</p>
       <Formulario />
+      <Alert msg={'hola'} color={'danger'}/>
     </div>
   )
 }

@@ -7,8 +7,25 @@ const Formulario = () => {
   const [pass, setPass] = useState('') 
   const [confirmPass, setConfirmPass] = useState('') 
 
+  const [error, setError] = useState(false)
+
+  const validateForm = e => {
+    e.preventDefault()
+    if(nombre === '' ||correo === '' ||pass === '' || confirmPass === ''){
+    setError(true)
+    console.log(error);
+    return
+    }
+    
+    setError(false)
+    setNombre('')
+    setCorreo('')
+    setPass('')
+    setConfirmPass('')
+  }
+
   return (
-    <form>
+    <form onSubmit={validateForm}>
       <input 
         placeholder="Nombre de usuario"
         type="text" 
@@ -41,6 +58,7 @@ const Formulario = () => {
         onChange={e => setConfirmPass(e.target.value)}
       />
       <button type="submit">Registrarse</button>
+      {error ? <p>error</p> : null}
     </form>
   )
 }
