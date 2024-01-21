@@ -1,23 +1,25 @@
 import { useState } from "react"
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = ({alert}) => {
   const [nombre, setNombre] = useState('') 
   const [correo, setCorreo] = useState('') 
   const [pass, setPass] = useState('') 
   const [confirmPass, setConfirmPass] = useState('') 
 
-  const [error, setError] = useState(false)
-
   const validateForm = e => {
     e.preventDefault()
     if(nombre === '' ||correo === '' ||pass === '' || confirmPass === ''){
-    setError(true)
-    console.log(error);
-    return
+      alert({msg: 'Completa todos los campos', color: 'danger'})
+      return
+    }
+
+    if(pass != confirmPass){
+      alert({msg: 'Las contraseñas no coinciden', color: 'warning'})
+      return
     }
     
-    setError(false)
+    alert({msg: 'Registro exitoso!', color: 'success'})
     setNombre('')
     setCorreo('')
     setPass('')
@@ -58,7 +60,6 @@ const Formulario = () => {
         onChange={e => setConfirmPass(e.target.value)}
       />
       <button type="submit">Registrarse</button>
-      {error ? <p>error</p> : null}
     </form>
   )
 }

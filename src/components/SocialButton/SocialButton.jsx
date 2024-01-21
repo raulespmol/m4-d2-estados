@@ -1,7 +1,8 @@
 const SocialButton = ({icon}) => {
+  const classes = `fs-3 bi bi-${icon}`
   return (
     <button>
-      <i className={`bi bi-${icon} fs-3`}></i>
+      <i className={classes}></i>
     </button>
   )
 }
