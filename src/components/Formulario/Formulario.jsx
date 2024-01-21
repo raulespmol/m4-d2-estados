@@ -24,6 +24,11 @@ const Formulario = ({alert}) => {
       alert({msg: 'Las contraseñas no coinciden', color: 'danger'})
       return
     }
+
+    if(pass.length < 4){
+      alert({msg: 'Contraseña demasiado corta', color: 'danger'})
+      return
+    }
     
     alert({msg: 'Registro exitoso!', color: 'success'})
     setNombre('')
@@ -50,12 +55,11 @@ const Formulario = ({alert}) => {
         onChange={e => setCorreo(e.target.value)}
       />
       <input 
-        placeholder="Contraseña"
+        placeholder="Contraseña (min. 4 caracteres)"
         type="password"
         name="pass"
         value={pass}
         onChange={e => setPass(e.target.value)}
-
       />
       <input 
         placeholder="Repite contraseña"

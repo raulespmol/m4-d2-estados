@@ -27,7 +27,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(224, 224, 224);
+  background: rgb(14,6,75);
+  background: linear-gradient(0deg, rgba(14,6,75,1) 0%, rgba(8,35,128,1) 100%); 
 }
 
 h1 {
@@ -42,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0e064b;
   cursor: pointer;
   transition: border-color 0.25s;
   color: #FFF;
