@@ -1,8 +1,8 @@
-# React + Vite
+# Estados de componentes y Eventos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Segundo Desafío del módulo N°4: React I, de la carrera Desarrollo Fullstack en Desafío Latam.
 
-Currently, two official plugins are available:
+Desarrollar una aplicación en React que permita al usuario validar un formulario de registro utilizando los eventos onChange y onSubmit.
+Creando distintos componentes que reciben props, además de almacenar los valores de los inputs a través del hook useState.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visita la app aquí](https://raulespmol.github.io/m4-d2-estados/)
