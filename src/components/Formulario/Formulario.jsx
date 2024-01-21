@@ -14,8 +14,14 @@ const Formulario = ({alert}) => {
       return
     }
 
+    const mailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+    if(!correo.match(mailRegex)){
+      alert({msg: 'Formato de correo inválido', color: 'danger'})
+      return
+    }
+
     if(pass != confirmPass){
-      alert({msg: 'Las contraseñas no coinciden', color: 'warning'})
+      alert({msg: 'Las contraseñas no coinciden', color: 'danger'})
       return
     }
     
@@ -38,11 +44,10 @@ const Formulario = ({alert}) => {
       />
       <input 
         placeholder="ejemplo@correo.cl"
-        type="email" 
+        type="text" 
         name="correo"
         value={correo}
         onChange={e => setCorreo(e.target.value)}
-
       />
       <input 
         placeholder="Contraseña"

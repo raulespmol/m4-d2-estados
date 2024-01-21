@@ -1,8 +1,8 @@
 import './Registro.css'
+import { useState } from 'react'
 import Formulario from "../Formulario/Formulario"
 import SocialButton from "../SocialButton/SocialButton"
 import Alert from '../Alert/Alert'
-import { useState } from 'react'
 
 const Registro = () => {
   const [alert, setAlert] = useState({msg: '', color: ''})
